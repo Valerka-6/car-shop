@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@300;400;500;700;900&display=swap');
+:root {
+    --dark: #262020;
+    --green: #4ba82e;
+    --light-green: #A8CD9F;
+    --olive: #E2F4C5;
+    --gray: rgb(118, 118, 118);
+}
+
+ul {
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.logo {
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.nav a.logo,
+footer a.logo {
+    color: var(--green);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.nav a,
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav a:hover,
+footer a:hover {
+    color: var(--dark)
+}
+
+.nav input:focus {
+    outline-color: var(--green);
+    outline-style: solid;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.site-search {
+    display: flex;
+}
+
+.site-search input {
+    border: 1px solid var(--gray);
+    border-radius: 4px 0 0 4px;
+}
+
+.site-search button {
+    background: var(--light-green);
+    border: 1px solid var(--gray);
+    -webkit-text-stroke: 1px var(--olive);
+    border-radius: 0 4px 4px 0;
+    border-left: 0;
+}
+
+#shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.shop-item {
+    width: calc(33% - 17px);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid;
+}
+
+.shop-item .content {
+    padding: 10px 10px 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.slider img {
+    width: 100%;
+    height: 200px;
+    flex-shrink: 3;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.shop-item p {
+    margin-top: 0;
+    border: 1px solid var(--green);
+    border-radius: 5px;
+    padding: 4px 5px;
+}
+
+.shop-item p:not(:first-child) {
+    margin-left: 20px;
+}
+
+.shop-item .price {
+    background-color: var(--olive);
+    padding: 4px 8px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+}
+
+.shop-item .footer {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shop-item .tags {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.shop-item .tag {
+    background: var(--light-green);
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.shop-item .characteristics {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#nothing-found {
+    color: var(--dark);
+    position: absolute;
+    white-space: nowrap;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
